@@ -637,7 +637,7 @@ wchar_t *slk_wlabel(int labnum)
         return (wchar_t *)0;
 
     for (i = 0, p = slk[labnum - 1].label; *p; i++)
-        temp[i] = *p++;
+        temp[i] = (wchar_t)(*p++);
 
     temp[i] = '\0';
 

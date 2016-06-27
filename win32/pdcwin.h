@@ -1,10 +1,13 @@
 /* Public Domain Curses */
 
 #ifdef PDC_WIDE
-# define UNICODE
+#	ifndef UNICODE
+#		define UNICODE
+#	endif
 #endif
 
 #include <windows.h>
+#include <VersionHelpers.h>
 #undef MOUSE_MOVED
 #include <curspriv.h>
 
